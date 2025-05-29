@@ -1,5 +1,0 @@
-name: Lint Check
-description: Verifica arquivos obrigatórios
-runs:
-  using: node16
-  main: index.js
