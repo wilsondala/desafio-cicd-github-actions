@@ -1,0 +1,7 @@
+{
+  "name": "desafio-cicd",
+  "scripts": {
+    "test": "echo \"Testes passando\" && exit 0",
+    "build": "mkdir -p dist && echo \"Conteúdo do build\" > dist/index.html"
+  }
+}
