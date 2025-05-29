@@ -1,7 +1,9 @@
 {
-  "name": "desafio-cicd",
+  "name": "desafio-cicd-wilson",
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Testes passando\" && exit 0",
-    "build": "mkdir -p dist && echo \"Conteúdo do build\" > dist/index.html"
-  }
+    "build": "mkdir -p dist && echo '<html><body><h1>CI/CD por Wilson Dala</h1></body></html>' > dist/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
