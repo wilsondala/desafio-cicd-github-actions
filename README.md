@@ -1,5 +1,3 @@
-# desafio-cicd-github-actions
-desafio
 # Desafio CI/CD com GitHub Actions
 
 Projeto desenvolvido por **Wilson Dala** para um desafio técnico, com foco em práticas DevOps modernas de CI/CD.
