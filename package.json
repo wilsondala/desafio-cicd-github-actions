@@ -1,0 +1,20 @@
+{
+  "name": "desafio-cicd-github-actions",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido por **[Wilson Dala](https://www.linkedin.com/in/wilson-dala-7a7261286/)** como parte de um desafio técnico, com foco em práticas modernas de DevOps e automação de pipelines CI/CD utilizando GitHub Actions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsondala/desafio-cicd-github-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsondala/desafio-cicd-github-actions/issues"
+  },
+  "homepage": "https://github.com/wilsondala/desafio-cicd-github-actions#readme"
+}
