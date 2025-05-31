@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install dependencies
+      - name: Checkout do código
         uses: actions/checkout@v3
 
       - name: Configurar Node.js
@@ -38,17 +38,17 @@ jobs:
         with:
           tag_name: v1.${{ github.run_number }}
           files: dist/**
-
+  
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: testing
+      name: testing  # <- deve estar configurado com reviewers
       url: https://vercel.com/wilsondalas-projects/desafio-cicd-github-actions
 
     steps:
       - name: Simular deploy
-        run: echo "Deploy executado com sucesso para o ambiente de teste"
+        run: echo "✅ Deploy executado com sucesso para o ambiente de teste"
 
       - name: Notificar sucesso por e-mail
         if: success()
@@ -58,8 +58,14 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "CI/CD OK"
-          body: "Pipeline concluído com sucesso por Wilson Dala"
+          subject: "✅ CI/CD OK - Aprovado e Deploy Realizado"
+          body: |
+            ✅ Pipeline de CI/CD concluído com sucesso por Wilson Dala.
+
+            O deploy foi aprovado manualmente via GitHub e executado com sucesso.
+
+            🔗 Projeto: https://vercel.com/wilsondalas-projects/desafio-cicd-github-actions
+            📂 Repositório: https://github.com/wilsondalas-projects/desafio-cicd-github-actions
           to: dalawilson1244@gmail.com
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
 
@@ -71,7 +77,10 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "CI/CD Falhou"
-          body: "Falha detectada no pipeline de Wilson Dala"
+          subject: "❌ CI/CD Falhou - Deploy Interrompido"
+          body: |
+            ❌ O pipeline de CI/CD falhou antes ou após a etapa de aprovação.
+
+            Verifique os logs: https://github.com/wilsondalas-projects/desafio-cicd-github-actions/actions
           to: dalawilson1244@gmail.com
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
