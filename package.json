@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Projeto desenvolvido por **[Wilson Dala](https://www.linkedin.com/in/wilson-dala-7a7261286/)** como parte de um desafio técnico, com foco em práticas modernas de DevOps e automação de pipelines CI/CD utilizando GitHub Actions.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Sem testes por enquanto\""
+"scripts": {
+  "test": "echo \"Sem testes por enquanto\"",
+  "build": "echo \"Build concluído com sucesso\""
 },
   "repository": {
     "type": "git",
