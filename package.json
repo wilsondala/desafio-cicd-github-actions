@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/wilsondala/desafio-cicd-github-actions/issues"
   },
-  "homepage": "https://github.com/wilsondala/desafio-cicd-github-actions#readme"
+  "homepage": "https://github.com/wilsondala/desafio-cicd-github-actions#readme",
+  "devDependencies": {
+    "sonar-scanner": "^3.1.0"
+  }
 }

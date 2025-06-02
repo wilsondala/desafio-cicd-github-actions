@@ -38,12 +38,37 @@ jobs:
         with:
           tag_name: v1.${{ github.run_number }}
           files: dist/**
-  
-  deploy:
+
+  sonarqube:
     needs: build
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Instalar sonar-scanner
+        run: npm install -g sonar-scanner
+
+      - name: Executar análise SonarQube
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=wilsondalas-project \
+            -Dsonar.sources=src \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.organization=wilsondala \
+            -Dsonar.login=${SONAR_TOKEN}
+
+  deploy:
+    needs: [build, sonarqube]
+    runs-on: ubuntu-latest
     environment:
-      name: testing  # <- deve estar configurado com reviewers
+      name: testing
       url: https://vercel.com/wilsondalas-projects/desafio-cicd-github-actions
 
     steps:

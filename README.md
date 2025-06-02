@@ -1,5 +1,8 @@
 # 🚀 Desafio Técnico CI/CD com GitHub Actions
 
+![GitHub Workflow Status](https://github.com/wilsondalas-projects/desafio-cicd-github-actions/actions/workflows/main.yml/badge.svg)
+
+
 Projeto desenvolvido por **[Wilson Dala](https://www.linkedin.com/in/wilson-dala-7a7261286/)** como parte de um desafio técnico, com foco em práticas modernas de DevOps e automação de pipelines CI/CD utilizando GitHub Actions.
 
 ---
@@ -97,4 +100,7 @@ npm run build
 
 Em caso de dúvidas ou sugestões:
 - 💼 LinkedIn: [Wilson Dala](https://www.linkedin.com/in/wilson-dala-7a7261286/)
-- 📧 Email: (adicione se desejar)
+- 📧 Email: 📧 Email: dalawilson1244@gmail.com
+
+
+
