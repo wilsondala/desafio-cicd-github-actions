@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # ou a versão do seu projeto
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -31,7 +31,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           args: >
-           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
