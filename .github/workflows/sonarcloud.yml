@@ -30,8 +30,8 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-          Organização: wilsondala
-          Projeto: desafio-cicd-github-actions
+          args: >
+           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
